@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blank</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>6. Music Search</h1>
+          <pre>
+            This challenge is different from the last 5.
+            Instead of going to an HTML endpoint,
+            we're going to a JSON endpoint.
+
+            Generally "humans" don't directly interact
+            with JSON endpoints, and Apple sends back its results as an attachment rather than in a webpage. That's expected!
+
+            Create an html `form` that searches for music
+            on the iTunes API.
+
+            You will need to take care to use the correct
+            query parameters. The only way to find out what
+            they are is to read their documentation:
+
+            https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/
+
+            To start, it's fine if your search is always in the US. As a bonus, add in the option to select which country to search in.
+          </pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+          <!-- CODE IN HERE -->
+          <form action='https://itunes.apple.com/search?'>
+            <div class="row">
+              <div class="col-md-10">
+                <input type="text" name="term" placeholder="Keyword" size="72" required autofocus>  
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-primary">Search</button>  
+              </div>              
+            </div>
+            
+            <div class="row">
+              <div class="col-md-4">
+                <!-- <label>Country</label> -->
+                <select name='country' required>
+                  <option value="ca" selected>Canada</option>
+                  <option value="cn">China</option>
+                  <option value="jp">Japan</option>
+                  <option value="kr">Korea</option>
+                  <option value="mx">Mexico</option>              
+                  <option value="us" >United States of America</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label>Limit</label>
+                <select name='limit'>
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50" selected>50</option>
+                </select>  
+              </div>
+              <div class="col-md-3">
+                <label>Media</label>
+                <select name='media'>
+                  <option value="">All</option>
+                  <option value="movie">Movie</option>
+                  <option value="podcast">Podcast</option>
+                  <option value="music">Music</option>
+                  <option value="musicVideo">Music video</option>
+                  <option value="audiobook">Audiobook</option>
+                  <option value="shortFilm">Short film</option>
+                  <option value="tvShow">TV show</option>
+                  <option value="software">Software</option>
+                  <option value="ebook">eBook</option>
+                </select>    
+              </div>
+              <div class="col-md-3">
+                <label>Explicit</label>
+                <input type="radio" name="explicit" value="Yes"><label>Yes</label>
+                <input type="radio" name="explicit" value="No" selected><label>No</label>  
+              </div>
+            </div>
+          </form>
+          <!-- CODE IN HERE -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
