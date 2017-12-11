@@ -1,0 +1,34 @@
+content {
+	position: absolute;
+	top: 10%;
+	bottom: 50%;
+	height: 40%;
+	left: 20%;
+	right: 20%;
+	width: 60%;
+	padding: 2em;
+	background-color: darkgrey;
+	border-radius: 10px;
+}
+
+table {
+	margin: 2em auto;
+	background-color: white;
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'Monoton', cursive;
+	color: white;
+}
+
+td {
+  width: 20px;
+  height: 20px;
+  border-color: darkred;
+  border-style: dotted none;
+}
+
+button {
+	margin: 1.5em auto;
+}
