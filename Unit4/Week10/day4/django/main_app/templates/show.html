@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    <h2> Name: {{ treasure.name}}</h1>
+    <p> Value: {{ treasure.value }}</p>
+    <p> Material: {{ treasure.material }}</p>
+    <p> Location: {{ treasure.location }}</p>
+    <button id ="likes" data-id="{{treasure.id}}" class="btn btn-mini btn-danger glyphicon glyphicon-heart" type="button">Likes:
+		{% if treasure.likes > 0 %} {{ treasure.likes }} {% else %} None :( {% endif %}
+	</button>
+    <hr />
+{% endblock %}

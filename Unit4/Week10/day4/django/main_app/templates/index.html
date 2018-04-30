@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+{% for treasure in treasures %}
+	<a href="/{{treasure.id}}">
+		<p>Name: {{ treasure.name }}</p>
+	    <a href="/user/{{treasure.user.username}}"
+	      <p>Found By: {{treasure.user.username }}</p>
+	    </a>
+		{% if treasure.value > 0 %}
+			<p>Value: {{ treasure.value}}</p>
+		{% else %}
+			<p>Value: Unknown</p>
+		{% endif%}
+	</a>
+  	<hr />
+{% endfor %}
+<h2>Add treasure</h2>
+<form action="post_url/" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Add" />
+</form>
+{% endblock %}  
