@@ -1,0 +1,13 @@
+content {
+	position: absolute;
+	top: 40vh;
+	bottom: 40vh;
+	height: 20vh;
+	left: 30vw;
+	right: 30vw;
+	width: 40vw;
+	font-size: 4vh;
+	padding: 6vh;
+	border: solid white;
+	border-radius: 2vh;
+}
